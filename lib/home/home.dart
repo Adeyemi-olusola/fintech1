@@ -27,9 +27,9 @@ late Animation<double> animation;
 late CurvedAnimation curve;
 
 final iconList = <IconData>[
-  Icons.brightness_5,
-  Icons.brightness_4,
-  Icons.brightness_6,
+  Icons.home,
+  Icons.money,
+  Icons.shop,
   Icons.brightness_7,
 ];
 
@@ -81,6 +81,7 @@ class _HomePageState extends State<HomePage>
           //params
         ),
         bottomNavigationBar: AnimatedBottomNavigationBar(
+          height:78,
           icons: iconList,
           activeIndex: _bottomNavIndex,
           gapLocation: GapLocation.center,
