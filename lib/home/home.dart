@@ -4,9 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/avd.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'dart:async';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'package:circular_reveal_animation/circular_reveal_animation.dart';
 import 'package:flutter/foundation.dart';
@@ -27,10 +30,10 @@ late Animation<double> animation;
 late CurvedAnimation curve;
 
 final iconList = <IconData>[
-  Icons.home,
-  Icons.money,
-  Icons.shop,
-  Icons.brightness_7,
+  MdiIcons.creditCardOutline,
+  MdiIcons.chartBubble,
+  MdiIcons.wallet,
+  MdiIcons.account,
 ];
 
 class _HomePageState extends State<HomePage>
@@ -74,15 +77,18 @@ class _HomePageState extends State<HomePage>
         backgroundColor: Color(0xffFFFFFF),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(300)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(300)),
           backgroundColor: Color(0xff7A70E6),
           child: Container(child: SvgPicture.asset('assets/svg/Shape.svg')),
           onPressed: () {},
           //params
         ),
         bottomNavigationBar: AnimatedBottomNavigationBar(
-          height:78,
+          height: 78,
           icons: iconList,
+          inactiveColor: Colors.grey,
+          activeColor: Color(0xff7A70E6),
           activeIndex: _bottomNavIndex,
           gapLocation: GapLocation.center,
           notchSmoothness: NotchSmoothness.verySmoothEdge,

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:second/card/all_card.dart';
+import 'package:second/card/new_card.dart';
 import 'package:second/home/home.dart';
+import 'package:second/card/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  HomePage(),
+      home:   HomePage()
     );
   }
 }
